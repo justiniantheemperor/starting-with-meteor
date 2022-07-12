@@ -25,6 +25,7 @@ export const ContactForm = () => {
     }, 3000);
   }
 
+  // function to save contact to database
   const saveContact = () => {
     Meteor.call('contacts.insert',{name,email,imageUrl}, (errorResponse) => {
       if (errorResponse) {
